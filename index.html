@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine Protocol</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+background:black;
+color:#00ffcc;
+font-family:monospace;
+text-align:center;
+padding:40px;
+}
+
+#box{
+margin-top:80px;
+}
+
+button{
+padding:12px 25px;
+margin-top:30px;
+background:#00ffcc;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:white;
+color:black;
+}
+</style>
+
+</head>
+<body>
+
+<div id="box">
+<h2 id="text">💻 Initializing Valentine Protocol...</h2>
+<button onclick="nextStep()">Continue</button>
+</div>
+
+<script>
+
+let step = 0;
+
+function nextStep(){
+
+step++;
+
+if(step==1){
+document.getElementById("text").innerHTML="🔍 Scanning Heart Connection...";
+}
+
+else if(step==2){
+document.getElementById("text").innerHTML="💓 Connection Detected <br> Target Locked: Aliza Yasmin Tonni";
+}
+
+else if(step==3){
+document.getElementById("text").innerHTML="📩 System Message: <br><br> Aj theke proti bochor ei din ta ekjon special manusher jonno reserve korte chai...";
+}
+
+else if(step==4){
+document.getElementById("text").innerHTML="✨ That special person is YOU ❤️ <br><br> Ami chai apni proti bochor amar wish er opekkhai thaken... <br> Ar ami apnar jonno wait korte pari.";
+}
+
+else if(step==5){
+document.getElementById("text").innerHTML="💖 Final Confirmation Required... <br><br> Would you like to accept this lifelong heart connection? <br><br> Will you be my Valentine? ❤️";
+document.querySelector("button").innerHTML="Accept ❤️";
+document.querySelector("button").onclick=function(){
+document.getElementById("text").innerHTML="🎉 Connection Accepted! <br><br> Happy Valentine’s Day, Aliza Yasmin Tonni ❤️ <br><br> System Status: Perfect Match Activated 💕";
+document.querySelector("button").style.display="none";
+};
+}
+
+}
+
+</script>
+
+</body>
+</html>
